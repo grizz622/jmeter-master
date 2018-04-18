@@ -1,0 +1,3 @@
+1-token?{"flag":"${token}","appId":"001"}
+2-token?{"flag":"","appId":"002"}
+3-token?{"flag":"errorToken","appId":"003"}

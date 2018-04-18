@@ -1,0 +1,3 @@
+用例1-token正确?{"flag":"${token}","appId":"001"}?"returnFlag":"1000"
+用例2-token为空?{"flag":"","appId":"002"}?"returnFlag":"1000"
+用例3-token错误?{"flag":"errorToken","appId":"003"}?"returnFlag":"1000"
