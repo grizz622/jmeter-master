@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+					white-space: nowrap;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				.LongTime {
+					font-weight:bold; color:#ff9900;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                .page_details_expanded
+                {
+                    display: block;
+                    display/* hide this definition from  IE5/6 */: table-row;
+                }
+
+
+			</style>
+<script language="JavaScript">
+	                function expand(details_id)
+				   	{
+				      
+				    	document.getElementById(details_id).className = "page_details_expanded";
+				   	}
+				   
+				   	function collapse(details_id)
+				   	{
+				      
+				      	document.getElementById(details_id).className = "page_details";
+				   	}
+				   
+				   	function change(details_id)
+				   	{
+				   		var _dataType=document.getElementById(details_id+"_image").getAttribute('data-type');
+				      	if(_dataType=='expand')
+				      	{
+				         	<!-- document.getElementById(details_id+"_image").src = "collapse.png";  -->
+				         	document.getElementById(details_id+"_image").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAARSURBVAjXY2DABuR/gBA2AAAzpwIvNQARCgAAAABJRU5ErkJggg==";
+				         	expand(details_id);
+				         	document.getElementById(details_id+"_image").setAttribute('data-type','collapse');
+				      	}
+				      	else
+				      	{
+				        	<!-- document.getElementById(details_id+"_image").src = "expand.png"; -->
+				        	document.getElementById(details_id+"_image").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC";
+				         	collapse(details_id);
+				         	document.getElementById(details_id+"_image").setAttribute('data-type','expand');
+				      	} 
+	                }
+				</script>
+</head>
+<body>
+<h1>Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2018/04/18 10:37</td><td align="center">Host: 127.0.0.1</td><td align="right"><a href="./TestLog.html">测试日志</a></td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th># Samples</th><th>Success</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th><th>90% Line</th><th>95% Line</th><th>QPS</th>
+</tr>
+<tr valign="top">
+<td align="center">12</td><td align="center">6</td><td style="font-weight:bold" align="center"><font color="red">6</font></td><td align="center">50.00%</td><td align="center">36 ms</td><td align="center">10 ms</td><td align="center">192 ms</td><td align="center">22 ms</td><td align="center">94 ms</td><td align="center">27.842 /s</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Pages</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>URL</th><th># Samples</th><th>Success</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th><th>90% Line</th><th>95% Line</th><th>QPS</th><th></th>
+</tr>
+<tr valign="top">
+<td align="center">获取tokenv1</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">100.00%</td><td align="center">192 ms</td><td align="center">192 ms</td><td align="center">192 ms</td><td align="center">192 ms</td><td align="center">192 ms</td><td align="center">5.208 /s</td><td align="center"><a href="javascript:change('page_details_1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_1_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_1">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "获取tokenv1"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v1 1-1</td><td align="center">1</td><td align="center">192</td><td align="center">233</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td align="center">使用tokenv1-成功</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">100.00%</td><td align="center">94 ms</td><td align="center">94 ms</td><td align="center">94 ms</td><td align="center">94 ms</td><td align="center">94 ms</td><td align="center">10.638 /s</td><td align="center"><a href="javascript:change('page_details_2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_2_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_2">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv1-成功"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v1 1-1</td><td align="center">1</td><td align="center">94</td><td align="center">214</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td align="center">使用tokenv3-1-用例1-token正确</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">100.00%</td><td align="center">22 ms</td><td align="center">22 ms</td><td align="center">22 ms</td><td align="center">22 ms</td><td align="center">22 ms</td><td align="center">45.455 /s</td><td align="center"><a href="javascript:change('page_details_3')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_3_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_3">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv3-1-用例1-token正确"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v3 3-1</td><td align="center">1</td><td align="center">22</td><td align="center">214</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv3-2-%E7%94%A8%E4%BE%8B2-token%E4%B8%BA%E7%A9%BA">使用tokenv3-2-用例2-token为空</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">16 ms</td><td align="center">16 ms</td><td align="center">16 ms</td><td align="center">16 ms</td><td align="center">16 ms</td><td align="center">62.500 /s</td><td align="center"><a href="javascript:change('page_details_4')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_4_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_4">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv3-2-用例2-token为空"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v3 3-2</td><td align="center">1</td><td align="center">16</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td align="center">获取tokenv2-1</td><td align="center">2</td><td align="center">2</td><td align="center">0</td><td align="center">100.00%</td><td align="center">16 ms</td><td align="center">15 ms</td><td align="center">16 ms</td><td align="center">15 ms</td><td align="center">15 ms</td><td align="center">64.516 /s</td><td align="center"><a href="javascript:change('page_details_5')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_5_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_5">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "获取tokenv2-1"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v2 2-1</td><td align="center">1</td><td align="center">16</td><td align="center">233</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">auto_interface_v3 3-1</td><td align="center">2</td><td align="center">15</td><td align="center">233</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv2-haveToken-3">使用tokenv2-haveToken-3</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">15 ms</td><td align="center">15 ms</td><td align="center">15 ms</td><td align="center">15 ms</td><td align="center">15 ms</td><td align="center">66.667 /s</td><td align="center"><a href="javascript:change('page_details_6')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_6_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_6">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv2-haveToken-3"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v2 2-3</td><td align="center">1</td><td align="center">15</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv3-3-%E7%94%A8%E4%BE%8B3-token%E9%94%99%E8%AF%AF">使用tokenv3-3-用例3-token错误</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">14 ms</td><td align="center">14 ms</td><td align="center">14 ms</td><td align="center">14 ms</td><td align="center">14 ms</td><td align="center">71.429 /s</td><td align="center"><a href="javascript:change('page_details_7')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_7_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_7">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv3-3-用例3-token错误"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v3 3-3</td><td align="center">1</td><td align="center">14</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv1-%E4%B8%BA%E7%A9%BA">使用tokenv1-为空</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">76.923 /s</td><td align="center"><a href="javascript:change('page_details_8')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_8_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_8">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv1-为空"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v1 1-1</td><td align="center">1</td><td align="center">13</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top">
+<td align="center">使用tokenv2-noToken-1</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">100.00%</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">13 ms</td><td align="center">76.923 /s</td><td align="center"><a href="javascript:change('page_details_9')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_9_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_9">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv2-noToken-1"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v2 2-1</td><td align="center">1</td><td align="center">13</td><td align="center">214</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv1-%E9%94%99%E8%AF%AF">使用tokenv1-错误</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">11 ms</td><td align="center">11 ms</td><td align="center">11 ms</td><td align="center">11 ms</td><td align="center">11 ms</td><td align="center">90.909 /s</td><td align="center"><a href="javascript:change('page_details_10')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_10_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_10">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv1-错误"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v1 1-1</td><td align="center">1</td><td align="center">11</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#%E4%BD%BF%E7%94%A8tokenv2-noToken-2">使用tokenv2-noToken-2</a></td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">0.00%</td><td align="center">10 ms</td><td align="center">10 ms</td><td align="center">10 ms</td><td align="center">10 ms</td><td align="center">10 ms</td><td align="center">100.000 /s</td><td align="center"><a href="javascript:change('page_details_11')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC" data-type="expand" id="page_details_11_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_11">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "使用tokenv2-noToken-2"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">auto_interface_v2 2-2</td><td align="center">1</td><td align="center">10</td><td align="center">208</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<h3>使用tokenv1-为空<a name="%E4%BD%BF%E7%94%A8tokenv1-%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1001","returnMsg":"token为空"}</td>
+</tr>
+</table>
+<h3>使用tokenv1-错误<a name="%E4%BD%BF%E7%94%A8tokenv1-%E9%94%99%E8%AF%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1002","returnMsg":"token错误"}</td>
+</tr>
+</table>
+<h3>使用tokenv2-noToken-2<a name="%E4%BD%BF%E7%94%A8tokenv2-noToken-2"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1001","returnMsg":"token为空"}</td>
+</tr>
+</table>
+<h3>使用tokenv2-haveToken-3<a name="%E4%BD%BF%E7%94%A8tokenv2-haveToken-3"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1002","returnMsg":"token错误"}</td>
+</tr>
+</table>
+<h3>使用tokenv3-2-用例2-token为空<a name="%E4%BD%BF%E7%94%A8tokenv3-2-%E7%94%A8%E4%BE%8B2-token%E4%B8%BA%E7%A9%BA"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1001","returnMsg":"token为空"}</td>
+</tr>
+</table>
+<h3>使用tokenv3-3-用例3-token错误<a name="%E4%BD%BF%E7%94%A8tokenv3-3-%E7%94%A8%E4%BE%8B3-token%E9%94%99%E8%AF%AF"></a>
+</h3>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details">
+<tr valign="top">
+<th align="center">Response</th><th align="center">Failure Message</th><th align="left">Response Data</th>
+</tr>
+<tr>
+<td>200 - OK</td><td>Test failed: text expected to contain /"returnFlag":"1000"/</td><td>{"returnFlag":"1002","returnMsg":"token错误"}</td>
+</tr>
+</table>
+</body>
+</html>

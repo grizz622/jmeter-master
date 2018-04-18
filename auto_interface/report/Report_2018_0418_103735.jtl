@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="192" it="0" lt="190" ct="117" ts="1524019057929" s="true" lb="获取tokenv1" rc="200" rm="OK" tn="auto_interface_v1 1-1" dt="text" by="233" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 72
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 43
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;获取token成功&quot;,&quot;token&quot;:&quot;19940622&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;flag&quot;:&quot;test&quot;,&#xd;
+    &quot;appId&quot;:&quot;001&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/getToken</java.net.URL>
+</httpSample>
+<httpSample t="94" it="0" lt="94" ct="4" ts="1524019058172" s="true" lb="使用tokenv1-成功" rc="200" rm="OK" tn="auto_interface_v1 1-1" dt="text" by="214" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 53
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 47
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;使用token成功&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;flag&quot;:&quot;19940622&quot;,&#xd;
+    &quot;appId&quot;:&quot;001&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="13" it="0" lt="13" ct="1" ts="1524019058269" s="false" lb="使用tokenv1-为空" rc="200" rm="OK" tn="auto_interface_v1 1-1" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 39
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1001&quot;,&quot;returnMsg&quot;:&quot;token为空&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;flag&quot;:&quot;&quot;,&#xd;
+    &quot;appId&quot;:&quot;002&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="11" ct="0" ts="1524019058284" s="false" lb="使用tokenv1-错误" rc="200" rm="OK" tn="auto_interface_v1 1-1" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 50
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1002&quot;,&quot;returnMsg&quot;:&quot;token错误&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;appId&quot;:&quot;003&quot;,&#xd;
+    &quot;flag&quot;:&quot;uerrorToken&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="16" it="0" lt="16" ct="1" ts="1524019058508" s="true" lb="获取tokenv2-1" rc="200" rm="OK" tn="auto_interface_v2 2-1" dt="text" by="233" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 72
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 43
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;获取token成功&quot;,&quot;token&quot;:&quot;19940622&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;flag&quot;:&quot;test&quot;,&#xd;
+    &quot;appId&quot;:&quot;001&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/getToken</java.net.URL>
+</httpSample>
+<httpSample t="13" it="0" lt="13" ct="1" ts="1524019058530" s="true" lb="使用tokenv2-noToken-1" rc="200" rm="OK" tn="auto_interface_v2 2-1" dt="text" by="214" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 53
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 25
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;使用token成功&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;&quot;,&quot;appId&quot;:&quot;001&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="10" it="0" lt="9" ct="0" ts="1524019058647" s="false" lb="使用tokenv2-noToken-2" rc="200" rm="OK" tn="auto_interface_v2 2-2" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:38 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 35
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1001&quot;,&quot;returnMsg&quot;:&quot;token为空&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;errorToken&quot;,&quot;appId&quot;:&quot;002&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="15" it="0" lt="15" ct="1" ts="1524019058990" s="false" lb="使用tokenv2-haveToken-3" rc="200" rm="OK" tn="auto_interface_v2 2-3" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:39 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 34
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1002&quot;,&quot;returnMsg&quot;:&quot;token错误&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;${token}&quot;, &quot;appId&quot;:&quot;003&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="15" it="0" lt="14" ct="1" ts="1524019059013" s="true" lb="获取tokenv2-1" rc="200" rm="OK" tn="auto_interface_v3 3-1" dt="text" by="233" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 72
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:39 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 43
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;获取token成功&quot;,&quot;token&quot;:&quot;19940622&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&#xd;
+    &quot;flag&quot;:&quot;test&quot;,&#xd;
+    &quot;appId&quot;:&quot;001&quot;&#xd;
+}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/getToken</java.net.URL>
+</httpSample>
+<httpSample t="22" it="0" lt="22" ct="10" ts="1524019059029" s="true" lb="使用tokenv3-1-用例1-token正确" rc="200" rm="OK" tn="auto_interface_v3 3-1" dt="text" by="214" sc="1" ec="0" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 53
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:39 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 33
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1000&quot;,&quot;returnMsg&quot;:&quot;使用token成功&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;19940622&quot;,&quot;appId&quot;:&quot;001&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="16" it="0" lt="16" ct="1" ts="1524019059350" s="false" lb="使用tokenv3-2-用例2-token为空" rc="200" rm="OK" tn="auto_interface_v3 3-2" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:39 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 25
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1001&quot;,&quot;returnMsg&quot;:&quot;token为空&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;&quot;,&quot;appId&quot;:&quot;002&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+<httpSample t="14" it="0" lt="13" ct="2" ts="1524019059693" s="false" lb="使用tokenv3-3-用例3-token错误" rc="200" rm="OK" tn="auto_interface_v3 3-3" dt="text" by="208" sc="1" ec="1" ng="1" na="1" hn="wjshare.local">
+  <assertionResult>
+    <name>响应断言</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Test failed: text expected to contain /&quot;returnFlag&quot;:&quot;1000&quot;/</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.0 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 47
+Server: Werkzeug/0.12.2 Python/2.7.10
+Date: Wed, 18 Apr 2018 02:37:39 GMT
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+Content-Type: application/json
+Content-Length: 35
+Host: 127.0.0.1:5201
+User-Agent: Apache-HttpClient/4.2.6 (java 1.5)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;returnFlag&quot;:&quot;1002&quot;,&quot;returnMsg&quot;:&quot;token错误&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">{&quot;flag&quot;:&quot;errorToken&quot;,&quot;appId&quot;:&quot;003&quot;}</queryString>
+  <java.net.URL>http://127.0.0.1:5201/useToken</java.net.URL>
+</httpSample>
+
+</testResults>
